@@ -1,0 +1,199 @@
+$logo-font-size: 2rem
+
+.logo
+    font-size: $logo-font-size
+    font-weight: 700
+    cursor: pointer
+    position: relative
+    color: $white--500
+    span
+        display: inline-block
+        transition: .5s
+        pointer-events: none
+        &:first-child, &:last-child, &:nth-last-child(2)
+            font-size: .75em
+        &:nth-last-child(2)
+            color: $main--500
+        &:first-child
+            transition-delay: 0.4s
+        &:nth-child(3)
+            transition-delay: 0.2s
+        &:nth-child(4)
+            transition-delay: 0.1s
+        &:nth-child(5)
+            transition-delay: 0s
+        &:first-child
+            width: .4em
+        &:nth-last-child(2), &:last-child
+            width: .3em
+        &:nth-child(2)
+            width: .4em
+        &:nth-child(3)
+            width: .5em
+        &:nth-child(4)
+            width: .45em
+        &:nth-child(5)
+            width: .45em
+        &:nth-child(6)
+            width: .55em
+
+    &_sm
+        @extend .logo
+        span
+            &:first-child, &:nth-child(3), &:nth-child(4), &:nth-child(5)
+                display: inline-block
+                width: 0rem
+                opacity: 0
+        &:hover, &:focus, .open &
+            span
+                &:first-child , &:nth-child(3), &:nth-child(4), &:nth-child(5)
+                    opacity: 1
+                &:first-child
+                    transition-delay: 0s
+                &:nth-child(3)
+                    transition-delay: 0.2s
+                &:nth-child(4)
+                    transition-delay: 0.3s
+                &:nth-child(5)
+                    transition-delay: 0.4s
+                &:first-child
+                    width: .4em
+                &:nth-last-child(2), &:last-child
+                    width: .3em
+                &:nth-child(2)
+                    width: .4em
+                &:nth-child(3)
+                    width: .5em
+                &:nth-child(4)
+                    width: .45em
+                &:nth-child(5)
+                    width: .45em
+                &:nth-child(6)
+                    width: .55em
+
+.about
+    font-size: $logo-font-size
+    font-weight: 700
+    cursor: pointer
+    position: relative
+    color: $white--500
+    span
+        transition: .5s
+        pointer-events: none
+        display: inline-block
+        &:first-child, &:last-child
+            font-size: .75em
+        &:nth-last-child(2)
+            font-size: .75em
+            color: $main--500
+        &:first-child
+            transition-delay: .3s
+        &:nth-child(4)
+            transition-delay: .1s
+        &:nth-child(5)
+            transition-delay: 0s
+        &:first-child
+            width: .4em
+        &:nth-last-child(2), &:last-child
+            width: .3em
+        &:nth-child(2), &:nth-child(4)
+            width: .5em
+        &:nth-child(3)
+            width: .56em
+        &:nth-child(5)
+            width: .57em
+        &:nth-child(6)
+            width: .4em
+    &_sm
+        @extend .about
+        span
+            &:first-child, &:nth-child(4), &:nth-child(5)
+                display: inline-block
+                width: 0rem
+                opacity: 0
+        &:hover, &:focus
+            span
+                opacity: 1
+                &:first-child
+                    width: .4em
+                &:nth-last-child(2), &:last-child
+                    width: .3em
+                &:nth-child(2), &:nth-child(4)
+                    width: .5em
+                &:nth-child(3)
+                    width: .56em
+                &:nth-child(5)
+                    width: .57em
+                &:nth-child(6)
+                    width: .4em
+                &:first-child
+                    transition-delay: 0s
+                &:nth-child(4)
+                    transition-delay: 0.1s
+                &:nth-child(5)
+                    transition-delay: 0.2s
+
+.contact
+    font-size: $logo-font-size
+    font-weight: 700
+    cursor: pointer
+    position: relative
+    color: $white--500
+    span
+        transition: .5s
+        pointer-events: none
+        display: inline-block
+        &:first-child, &:last-child, &:nth-last-child(2)
+            font-size: .75em
+        &:nth-last-child(2)
+            font-size: .75em
+            color: $main--500
+        &:first-child
+            transition-delay: 0.3s
+        &:nth-child(6)
+            transition-delay: 0.2s
+        &:nth-child(7)
+            transition-delay: 0.1s
+        &:nth-child(8)
+            transition-delay: 0s
+        &:first-child
+            width: .4em
+        &:nth-last-child(2), &:last-child
+            width: .3em
+        &:nth-child(2), &:nth-child(6), &:nth-child(7)
+            width: .45em
+        &:nth-child(3)
+            width: .5em
+        &:nth-child(4)
+            width: .55em
+        &:nth-child(5), &:nth-child(8)
+            width: .4em
+    &_sm
+        @extend .contact
+        span
+            &:first-child, &:nth-child(6), &:nth-child(7), &:nth-child(8)
+                width: 0rem
+                opacity: 0
+        &:hover, &:focus
+            span
+                opacity: 1
+                &:first-child
+                    width: .4em
+                &:nth-last-child(2), &:last-child
+                    width: .3em
+                &:nth-child(2), &:nth-child(6), &:nth-child(7)
+                    width: .45em
+                &:nth-child(3)
+                    width: .5em
+                &:nth-child(4)
+                    width: .55em
+                &:nth-child(5), &:nth-child(8)
+                    width: .4em
+                &:first-child
+                    transition-delay: 0s
+                &:nth-child(6)
+                    transition-delay: 0.1s
+                &:nth-child(7)
+                    transition-delay: 0.2s
+                &:nth-child(8)
+                    transition-delay: 0.3s
