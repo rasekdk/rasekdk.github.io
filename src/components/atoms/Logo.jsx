@@ -7,7 +7,6 @@ function Logo({ size = "small", type = "logo", menuOpen, setMenuOpen }) {
         className={size === "small" ? "about_sm" : "about"}
         aria-expanded="false"
         aria-label="about"
-        onClick={() => setMenuOpen(!menuOpen)}
       >
         <span>&#60;</span>
         <span>a</span>
@@ -25,7 +24,6 @@ function Logo({ size = "small", type = "logo", menuOpen, setMenuOpen }) {
         className={size === "small" ? "contact_sm" : "contact"}
         aria-expanded="false"
         aria-label="rasek"
-        onClick={() => setMenuOpen(!menuOpen)}
       >
         <span>&#60;</span>
         <span>c</span>
@@ -44,7 +42,6 @@ function Logo({ size = "small", type = "logo", menuOpen, setMenuOpen }) {
       className={size === "small" ? "logo_sm" : "logo"}
       aria-expanded="false"
       aria-label="rasek"
-      onClick={() => setMenuOpen(!menuOpen)}
     >
       <span>&#60;</span>
       <span>r</span>

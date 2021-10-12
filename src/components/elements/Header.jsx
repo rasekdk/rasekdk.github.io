@@ -1,13 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../atoms/Logo";
 
 function Header() {
   return (
     <header>
       <div>
-        <Logo type={"logo"} />
-        <Logo type={"about"} />
-        <Logo type={"contact"} />
+        <Link to="/">
+          <Logo type={"logo"} />
+        </Link>
+        <Link to="/about">
+          <Logo type={"about"} />
+        </Link>
+        <Link to="/contact">
+          <Logo type={"contact"} />
+        </Link>
         {/* <div>
           <nav>
             <ul>
