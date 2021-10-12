@@ -1,6 +1,6 @@
 import React from "react";
 
-function Logo({ size = "small", type = "logo", menuOpen, setMenuOpen }) {
+function Logo({ size, type = "logo" }) {
   if (type === "about")
     return (
       <div

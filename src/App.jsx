@@ -10,8 +10,8 @@ function App() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="App">
-      <Header />
+    <div className={menuOpen ? "App menuOpen" : "App"}>
+      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Switch>
         <Route exact path="/">
           <Home />

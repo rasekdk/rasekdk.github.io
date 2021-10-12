@@ -1,30 +1,33 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "../atoms/Logo";
 
-function Header() {
+function Header({ menuOpen, setMenuOpen }) {
   return (
-    <header>
-      <div>
-        <Link to="/">
-          <Logo type={"logo"} />
-        </Link>
-        <Link to="/about">
-          <Logo type={"about"} />
-        </Link>
-        <Link to="/contact">
-          <Logo type={"contact"} />
-        </Link>
-        {/* <div>
-          <nav>
-            <ul>
-              <li>&#60;rasek/&#62;</li>
-              <li>&#60;about/&#62;</li>
-              <li>&#60;contact/&#62;</li>
-            </ul>
-          </nav>
-        </div> */}
+    <header className="menu">
+      <Logo size={menuOpen ? "small" : ""} />
+      <div
+        className={menuOpen ? "menu_burger open" : "menu_burger"}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span>&#91;</span>
+        <span>m</span>
+        <span>e</span>
+        <span>n</span>
+        <span>u</span>
+        <span>&#93;</span>
       </div>
+      <nav className={menuOpen ? "open" : ""}>
+        <NavLink exact to="/">
+          <Logo type={"logo"} />
+        </NavLink>
+        <NavLink exact to="/about">
+          <Logo type={"about"} />
+        </NavLink>
+        <NavLink exact to="/contact">
+          <Logo type={"contact"} />
+        </NavLink>
+      </nav>
     </header>
   );
 }
