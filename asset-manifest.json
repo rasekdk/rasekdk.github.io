@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/rasekdk.github.io/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/rasekdk.github.io/static/js/main.6d1be6b4.chunk.js",
+    "main.js.map": "/rasekdk.github.io/static/js/main.6d1be6b4.chunk.js.map",
+    "runtime-main.js": "/rasekdk.github.io/static/js/runtime-main.74e024fb.js",
+    "runtime-main.js.map": "/rasekdk.github.io/static/js/runtime-main.74e024fb.js.map",
+    "static/js/2.4a7be58e.chunk.js": "/rasekdk.github.io/static/js/2.4a7be58e.chunk.js",
+    "static/js/2.4a7be58e.chunk.js.map": "/rasekdk.github.io/static/js/2.4a7be58e.chunk.js.map",
+    "static/js/3.baa53fd2.chunk.js": "/rasekdk.github.io/static/js/3.baa53fd2.chunk.js",
+    "static/js/3.baa53fd2.chunk.js.map": "/rasekdk.github.io/static/js/3.baa53fd2.chunk.js.map",
+    "index.html": "/rasekdk.github.io/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/rasekdk.github.io/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.4a7be58e.chunk.js.LICENSE.txt": "/rasekdk.github.io/static/js/2.4a7be58e.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/rasekdk.github.io/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.74e024fb.js",
+    "static/js/2.4a7be58e.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.6d1be6b4.chunk.js"
+  ]
+}
