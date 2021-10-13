@@ -1,0 +1,26 @@
+section
+    display: flex
+    justify-content: center
+    align-items: left
+    flex-direction: column
+    height: 100vh
+    margin-left: 3rem
+    padding-right: 1rem
+    position: relative
+    &::before
+        content: ""
+        display: block
+        width: .05rem
+        height: 100vh
+        background-color: $main--500
+        position: absolute
+        top: 50vh
+        left: -1.5rem
+    &::after
+        content: ""
+        display: block
+        position: absolute
+        background-color: $main--500
+        width: .5rem
+        height: .5rem
+        left: -1.75rem

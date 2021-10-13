@@ -1,6 +1,39 @@
-$font-family: 'Zilla Slab', serif
+$secondary-family: 'Zilla Slab', serif
+$font-family: 'Roboto Mono', sans-serif
 
 :root
     font-family: $font-family
     font-weight: 400
     font-style: normal
+
+h1
+    font-size: 3.5rem
+
+h2
+    font-size: 2rem
+
+h3
+    font-size: 1.75rem
+
+@include headings
+    font-weight: 700
+    font-family: $secondary-family
+
+.high_color
+    color: $main--500
+    font-weight: 700
+
+.subtitle
+    font-family: $font-family
+    font-size: 1.2rem
+    font-weight: 400
+    color: $main--500
+    &_low
+        font-family: $font-family
+        font-size: 1.2rem
+        font-weight: 400
+        color: $grey--300
+
+a
+    &:hover
+        color: $main--300
