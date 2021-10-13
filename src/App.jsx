@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router";
 import Header from "./components/elements/Header";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
-import Home from "./components/pages/Home";
+import Home from "./components/pages/Home/Home";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
