@@ -1,9 +1,11 @@
+import { AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
-import { Route, Switch } from "react-router";
+import { Route, Switch, Redirect } from "react-router";
 
 import Header from "./components/elements/Header";
 import About from "./components/pages/About";
 import Contact from "./components/pages/Contact";
+import ErrorPage from "./components/pages/ErrorPage";
 import Home from "./components/pages/Home/Home";
 
 function App() {
@@ -12,17 +14,18 @@ function App() {
   return (
     <div className={menuOpen ? "App menuOpen" : "App"}>
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route exact path="/about">
-          <About />
-        </Route>
-        <Route exact path="/contact">
-          <Contact />
-        </Route>
-      </Switch>
+      <AnimatePresence>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/contact" component={Contact} />
+          <Route component={ErrorPage} />
+        </Switch>
+      </AnimatePresence>
     </div>
   );
 }
