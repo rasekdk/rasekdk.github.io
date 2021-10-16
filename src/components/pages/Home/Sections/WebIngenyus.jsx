@@ -16,12 +16,7 @@ function WebIngenyus() {
         <h3>.about()</h3>
         <p>
           I was developing multiple web pages and e-commerces at @
-          <a
-            href="https://www.ingenyus.es/"
-            rel="noreferrer"
-            target="_blank"
-            className="high_color"
-          >
+          <a href="https://www.ingenyus.es/" rel="noreferrer" target="_blank">
             ingenyus*
           </a>{" "}
           and working with the creative and desing team to get a better{" "}

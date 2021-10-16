@@ -13,34 +13,19 @@ function WebBiojuego() {
         <h3>.about()</h3>
         <p>
           Working at{" "}
-          <a
-            href="https://www.ingenyus.es/"
-            rel="noreferrer"
-            target="_blank"
-            className="high_color"
-          >
+          <a href="https://www.ingenyus.es/" rel="noreferrer" target="_blank">
             ingenyus*
           </a>{" "}
           I have developed a web video game width{" "}
           <strong className="high_color">React.js</strong> for @
-          <a
-            href="https://www.bioga.org/"
-            rel="noreferrer"
-            target="_blank"
-            className="high_color"
-          >
+          <a href="https://www.bioga.org/" rel="noreferrer" target="_blank">
             Bioga
           </a>
           .
         </p>
         <p>
           The idea was to develop a form where people could lear about @
-          <a
-            href="https://www.bioga.org/"
-            rel="noreferrer"
-            target="_blank"
-            className="high_color"
-          >
+          <a href="https://www.bioga.org/" rel="noreferrer" target="_blank">
             Bioga
           </a>{" "}
           to show all the work that they and their partners do, but at the same
@@ -52,7 +37,6 @@ function WebBiojuego() {
             href="https://biojuego.bioga.org/"
             rel="noreferrer"
             target="_blank"
-            className="high_color"
           >
             biojuego.bioga.org
           </a>

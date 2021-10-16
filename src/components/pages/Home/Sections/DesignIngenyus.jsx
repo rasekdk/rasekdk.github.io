@@ -16,12 +16,7 @@ function DesignIngenyus() {
         <h3>.about()</h3>
         <p>
           I was designing and building web pages and e-commerces at @
-          <a
-            href="https://www.ingenyus.es/"
-            rel="noreferrer"
-            target="_blank"
-            className="high_color"
-          >
+          <a href="https://www.ingenyus.es/" rel="noreferrer" target="_blank">
             ingenyus*
           </a>
           .
