@@ -5,14 +5,14 @@ import JobSkill from "../../../atoms/JobSkill";
 function WebIngenyus() {
   return (
     <section>
-      <p className="job_date">April 2021 - now</p>
+      <p className="section_date">April 2021 - now</p>
       <h2>
         webDeveloper
         <br className="show_md" />
         .at(<span className="high_color">'ingenyus*'</span>)
       </h2>
       <span className="subtitle_low">&#60;ATWA/&#62;</span>
-      <div className="job_description">
+      <div className="section_description">
         <h3>.about()</h3>
         <p>
           I was developing multiple web pages and e-commerces at @
@@ -24,9 +24,9 @@ function WebIngenyus() {
           sites.
         </p>
       </div>
-      <div className="job_skills">
+      <div className="section_skills">
         <h3>.skills()</h3>
-        <ul className="job_skills__list">
+        <ul className="section_skills__list">
           <JobSkill>PHP</JobSkill>
           <JobSkill>Wordpress</JobSkill>
           <JobSkill>JS</JobSkill>

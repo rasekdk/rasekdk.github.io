@@ -9,7 +9,7 @@ function WebBiojuego() {
         .project(<span className="high_color">'BioJuego'</span>)
       </h2>
       <span className="subtitle_low">&#60;Pokemon Theme/&#62;</span>
-      <div className="job_description">
+      <div className="section_description">
         <h3>.about()</h3>
         <p>
           Working at{" "}
