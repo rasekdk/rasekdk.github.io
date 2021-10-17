@@ -3,11 +3,16 @@
     display: block
     width: auto
     color: $white--500
-    padding: .5rem 1rem
+    padding: .4rem 1rem
     width: fit-content
     border-radius: 1rem
     margin-top: 1rem
-    transition: .5s ease-out
+    transition: .25s ease-out
     &:hover
         color: $main--500
         background-color: white
+    &_inline
+        @extend .btn
+        display: inline-block
+        font-weight: 400
+        font-size: inherit
