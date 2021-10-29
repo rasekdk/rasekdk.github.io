@@ -9,7 +9,7 @@ import DownloadIco from "../atoms/icons/DownloadIco";
 function About() {
   return (
     <PageCharger>
-      <section>
+      <section className="about_section">
         <h1>
           <Logo type="about" />
         </h1>
@@ -57,49 +57,51 @@ function About() {
           </ul>
         </div>
         <div className="section_description">
-          <h2>Tools/experience</h2>
+          <h2>Tools/years</h2>
           <ul className="section_list">
-            <li className="section_list__item">
-              HTHML / <span>3+ years</span>
-            </li>
-            <li className="section_list__item">
-              CSS / <span>3+ years</span>
-            </li>
-            <li className="section_list__item">
-              JavaScript / <span>1+ years</span>
-            </li>
-          </ul>
-          <ul className="section_list">
-            <li className="section_list__item">
-              React.js / <span>1+ year</span>
-            </li>
-            <li className="section_list__item">
-              Node / <span>1+ years</span>
-            </li>
-            <li className="section_list__item">
-              Vue / <span>~1 years</span>
-            </li>
-            <li className="section_list__item">
-              TypeScript / <span>~1 years</span>
-            </li>
-          </ul>
-          <ul className="section_list">
-            <li className="section_list__item">
-              Wordpress / <span>2+ years</span>
-            </li>
-            <li className="section_list__item">
-              jQuery / <span>1+ years</span>
-            </li>
-            <li className="section_list__item">
-              Sass / <span>1+ years</span>
-            </li>
+            <ul className="">
+              <li className="section_list__item">
+                HTHML <span>3+</span>
+              </li>
+              <li className="section_list__item">
+                CSS <span>3+</span>
+              </li>
+              <li className="section_list__item">
+                JavaScript <span>1+</span>
+              </li>
+            </ul>
+            <ul className="">
+              <li className="section_list__item">
+                React.js / <span>1+ year</span>
+              </li>
+              <li className="section_list__item">
+                Node.js <span>1+</span>
+              </li>
+              <li className="section_list__item">
+                Vue <span>~1</span>
+              </li>
+              <li className="section_list__item">
+                TypeScript <span>~1</span>
+              </li>
+            </ul>
+            <ul className="">
+              <li className="section_list__item">
+                Wordpress <span>2+</span>
+              </li>
+              <li className="section_list__item">
+                jQuery <span>1+</span>
+              </li>
+              <li className="section_list__item">
+                Sass <span>1+</span>
+              </li>
+            </ul>
           </ul>
         </div>
         <div className="section_description">
           <h2>Experience</h2>
           <ul className="section_list">
             <li className="section_list__item">
-              <h3 className="subtitle">Web Developer</h3>
+              <p className="high_color">Web Developer</p>
               <p>
                 @
                 <a
@@ -114,7 +116,7 @@ function About() {
               <p className="section_date">2021 - now</p>
             </li>
             <li className="section_list__item">
-              <h3 className="subtitle">Graphic designer</h3>
+              <p className="high_color">Graphic designer</p>
               <p>
                 @
                 <a
@@ -160,6 +162,7 @@ function About() {
             <li className="section_list__item">Video games</li>
             <li className="section_list__item">Comics</li>
             <li className="section_list__item">Films</li>
+            <li className="section_list__item">Tv series</li>
           </ul>
         </div>
       </section>

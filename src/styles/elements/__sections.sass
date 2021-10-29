@@ -3,16 +3,18 @@ section
     justify-content: center
     align-items: left
     flex-direction: column
-    min-height: 100vh
     margin-left: 3rem
-    padding: 8rem 0
+    @include laptop
+        margin-left: 20vw
+        padding-right: 10vw
+    padding: calc(50vh - 2.5rem) 0 0
     padding-right: 1rem
     position: relative
     &::before
         content: ""
         display: block
         width: .05rem
-        height: 100vh
+        height: 100%
         background-color: $main--500
         position: absolute
         top: 50vh
@@ -25,6 +27,13 @@ section
         width: .5rem
         height: .5rem
         left: -1.75rem
+        top: 50vh
+    &.about_section
+        padding-top: 40vh
+    &:last-child
+        padding-bottom: 15rem
+    &.contact_section
+        min-height: 100vh
 
 .section
     &_description
@@ -51,12 +60,25 @@ section
     &_list
         padding-top: 1rem
         padding-left: .5rem
+        @include tablet
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-gap: 1rem
         &__item
             color: $grey--300
             padding-bottom: .5rem
+            &:first-child
+                padding-top: 1rem
+            @include tablet
+                &:first-child
+                    padding-top: 0
             p
                 padding: 0
             span
                 color: $grey--500
             *
                 padding: .5rem 0
+
+.menuOpen
+    overflow: hidden
+    height: 100vh

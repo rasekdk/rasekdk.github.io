@@ -6,7 +6,7 @@ import PageCharger from "../PageCharger";
 function Contact() {
   return (
     <PageCharger>
-      <section>
+      <section className="contact_section">
         <h1>
           <Logo type="contact" />
         </h1>
