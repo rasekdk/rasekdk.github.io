@@ -1,7 +1,7 @@
 import React from "react";
 
-import Logo from "../atoms/Logo";
-import PageCharger from "../PageCharger";
+import Logo from "../../atoms/Logo";
+import PageCharger from "../../PageCharger";
 
 function Contact() {
   return (
