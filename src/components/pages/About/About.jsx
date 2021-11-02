@@ -1,10 +1,10 @@
 import React from "react";
 
-import PageCharger from "../PageCharger";
-import Logo from "../atoms/Logo";
-import GitHubIco from "../atoms/icons/GitHubIco";
-import LinkedinIco from "../atoms/icons/LinkedinIco";
-import DownloadIco from "../atoms/icons/DownloadIco";
+import PageCharger from "../../PageCharger";
+import Logo from "../../atoms/Logo";
+import GitHubIco from "../../atoms/icons/GitHubIco";
+import LinkedinIco from "../../atoms/icons/LinkedinIco";
+import DownloadIco from "../../atoms/icons/DownloadIco";
 
 function About() {
   return (

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Route, Switch, Redirect } from "react-router";
 
 import Header from "./components/elements/Header";
-import About from "./components/pages/About";
+import About from "./components/pages/About/About";
 import Contact from "./components/pages/Contact";
 import ErrorPage from "./components/pages/ErrorPage";
 import Home from "./components/pages/Home/Home";
