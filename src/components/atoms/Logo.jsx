@@ -37,6 +37,26 @@ function Logo({ size, type = "logo" }) {
         <span>&#62;</span>
       </div>
     );
+  if (type === "projects")
+    return (
+      <div
+        className={size === "small" ? "contact_sm" : "contact"}
+        aria-expanded="false"
+        aria-label="rasek"
+      >
+        <span>&#60;</span>
+        <span>p</span>
+        <span>r</span>
+        <span>o</span>
+        <span>j</span>
+        <span>e</span>
+        <span>c</span>
+        <span>t</span>
+        <span>s</span>
+        <span>/</span>
+        <span>&#62;</span>
+      </div>
+    );
   return (
     <div
       className={size === "small" ? "logo_sm" : "logo"}
