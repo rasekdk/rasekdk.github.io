@@ -11,9 +11,9 @@ function Nav({ onClick, className }) {
       <NavLink exact to="/about" onClick={onClick}>
         <Logo type={"about"} />
       </NavLink>
-      <NavLink exact to="/projects" onClick={onClick}>
+      {/* <NavLink exact to="/projects" onClick={onClick}>
         <Logo type={"projects"} />
-      </NavLink>
+      </NavLink> */}
       <NavLink exact to="/contact" onClick={onClick}>
         <Logo type={"contact"} />
       </NavLink>
