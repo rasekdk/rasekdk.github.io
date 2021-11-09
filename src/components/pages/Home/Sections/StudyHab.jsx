@@ -16,8 +16,11 @@ function StudyHab() {
         <h3>.about()</h3>
         <p>It was hard but also incredible experience.</p>
         <p>
-          A fullstack web development bootcamp based on{" "}
-          <strong>React.js</strong>, <strong>Node.js</strong> and{" "}
+          A fullstack web development bootcamp at @
+          <a href="https://www.hackaboss.com/" target="_blank" rel="noreferrer">
+            Hack a Boss
+          </a>{" "}
+          based on <strong>React.js</strong>, <strong>Node.js</strong> and{" "}
           <strong>MySQL</strong>.
         </p>
       </div>
