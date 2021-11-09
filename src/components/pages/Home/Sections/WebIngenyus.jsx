@@ -20,8 +20,7 @@ function WebIngenyus() {
             ingenyus*
           </a>{" "}
           and working with the creative and desing team to get a better{" "}
-          <strong className="high_color">UX/UI</strong> on all our clients'
-          sites.
+          <strong>UX/UI</strong> on all our clients' sites.
         </p>
       </div>
       <div className="section_skills">

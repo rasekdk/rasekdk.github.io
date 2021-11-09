@@ -8,17 +8,15 @@ function StudyHabProject() {
       <h2>
         studies
         <br className="show_md" />
-        .project(<span className="high_color">'Hack a Boss'</span>)
+        .project(<span className="high_color">'Community'</span>)
       </h2>
       <span className="subtitle_low">&#60;Classico/&#62;</span>
       <div className="section_description">
         <h3>.about()</h3>
         <p>A social network from scratch.</p>
         <p>
-          A fullstack web development bootcamp based on{" "}
-          <strong className="high_color">React.js</strong>,{" "}
-          <strong className="high_color">Node.js</strong> and{" "}
-          <strong className="high_color">MySQL</strong>.
+          A fullstack social network app based on <strong>React.js</strong>,{" "}
+          <strong>Node.js</strong> and <strong>MySQL</strong>.
         </p>
       </div>
       <div className="section_skills">
@@ -34,7 +32,7 @@ function StudyHabProject() {
       </div>
       <div className="section_description">
         <h3>.wip()</h3>
-        <p>
+        <p className="small_text">
           I'm currently working on a new version of this project with some new
           tecnologies I have learned since I finished it.
         </p>

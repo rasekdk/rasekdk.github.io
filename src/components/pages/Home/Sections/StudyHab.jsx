@@ -17,9 +17,8 @@ function StudyHab() {
         <p>It was hard but also incredible experience.</p>
         <p>
           A fullstack web development bootcamp based on{" "}
-          <strong className="high_color">React.js</strong>,{" "}
-          <strong className="high_color">Node.js</strong> and{" "}
-          <strong className="high_color">MySQL</strong>.
+          <strong>React.js</strong>, <strong>Node.js</strong> and{" "}
+          <strong>MySQL</strong>.
         </p>
       </div>
       <div className="section_skills">
