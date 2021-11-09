@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import BurgerToggle from "../atoms/BurgerToggle";
-import Logo from "../atoms/Logo";
+import Title from "../atoms/Logo/Title";
 import Nav from "./Nav";
 
 function Header({ menuOpen, setMenuOpen }) {
@@ -10,7 +10,7 @@ function Header({ menuOpen, setMenuOpen }) {
   return (
     <header className="menu">
       <Link exact to="/">
-        <Logo size={menuOpen ? "small" : ""} />
+        <Title size={menuOpen ? "small" : ""} />
       </Link>
       <BurgerToggle
         className={menuOpen ? "menu_burger open" : "menu_burger"}

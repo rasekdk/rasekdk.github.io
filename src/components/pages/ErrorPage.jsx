@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PageCharger from "../PageCharger";
 
 function ErrorPage() {
   return (
-    <main>
+    <PageCharger>
       <section>
         <h2>
           page
@@ -16,7 +17,7 @@ function ErrorPage() {
           &#60; Back Home
         </Link>
       </section>
-    </main>
+    </PageCharger>
   );
 }
 

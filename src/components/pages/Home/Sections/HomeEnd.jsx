@@ -1,7 +1,5 @@
 import React from "react";
 
-import JobSkill from "../../../atoms/JobSkill";
-
 function HomeEnd() {
   return (
     <section>
