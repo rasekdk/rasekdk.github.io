@@ -8,7 +8,7 @@ function HomeEnd() {
       <span className="subtitle_low">&#60;/&#62;</span>
       <p>It's a work in progress web site so check it back often!</p>
       <p>
-        You can check thisproject and more <Link to="/projects">here</Link>
+        You can check this project and more <Link to="/projects">here</Link>
       </p>
     </section>
   );
