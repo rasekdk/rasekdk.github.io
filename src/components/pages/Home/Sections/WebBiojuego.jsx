@@ -12,7 +12,7 @@ function WebBiojuego() {
       <div className="section_description">
         <h3>.about()</h3>
         <p>
-          Working at{" "}
+          Working at @
           <a href="https://www.ingenyus.es/" rel="noreferrer" target="_blank">
             ingenyus*
           </a>{" "}
