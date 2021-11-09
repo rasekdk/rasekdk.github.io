@@ -24,9 +24,9 @@ function App() {
           <Route exact path="/about">
             <About />
           </Route>
-          {/* <Route exact path="/projects">
+          <Route exact path="/projects">
             <Projects />
-          </Route> */}
+          </Route>
           <Route exact path="/contact" component={Contact} />
           <Route component={ErrorPage} />
         </Switch>
