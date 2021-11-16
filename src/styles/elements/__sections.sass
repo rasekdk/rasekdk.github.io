@@ -62,7 +62,7 @@ section
         padding-left: .5rem
         @include tablet
             display: grid
-            grid-template-columns: repeat(4, 1fr)
+            grid-template-columns: repeat(auto-fit, minmax(25%, 1fr))
             grid-gap: 1rem
         &__item
             color: $grey--300
@@ -78,7 +78,3 @@ section
                 color: $grey--500
             *
                 padding: .5rem 0
-
-.menuOpen
-    overflow: hidden
-    height: 100vh
