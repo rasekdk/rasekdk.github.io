@@ -279,3 +279,94 @@ $logo-font-size: inherit
                     transition-delay: .5s
                 &:nth-last-child(2), &:last-child // />
                     width: .3em
+
+.community
+    font-size: 3rem
+    font-family: $secondary-family
+    font-weight: 700
+    cursor: default
+    position: relative
+    color: $white--500
+    white-space: nowrap
+    span
+        transition: .5s
+        pointer-events: none
+        display: inline-block
+        &:first-child, &:last-child, &:nth-last-child(2)
+            font-size: .75em
+        &:nth-last-child(2)
+            font-size: .75em
+            color: $main--500
+        &:first-child // <
+            width: .4em
+            transition-delay: .5s
+        &:nth-child(2) // c
+            width: .5em
+        &:nth-child(3) // o
+            width: .5em
+        &:nth-child(4) // m
+            width: .9em
+        &:nth-child(5) //m
+            width: .9em
+            transition-delay: .5s
+        &:nth-child(6) // u
+            width: .6em
+            transition-delay: .4s
+        &:nth-child(7) // n
+            width: .65em
+            transition-delay: .3s
+        &:nth-child(8) // i
+            width: .3em
+            transition-delay: .2s
+        &:nth-child(9) // t
+            width: .4em
+            transition-delay: 0.1s
+        &:nth-child(10) // y
+            width: .4em
+            transition-delay: 0s
+        &:nth-last-child(2), &:last-child // />
+            width: .3em
+    &_sm
+        @extend .community
+        cursor: pointer
+        span
+            &:first-child, &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8), &:nth-child(9), &:nth-child(10)
+                width: 0rem
+                opacity: 0
+        &:hover, &:focus
+            span
+                opacity: 1
+                &:first-child, &:last-child, &:nth-last-child(2)
+                    font-size: .75em
+                &:nth-last-child(2)
+                    font-size: .75em
+                    color: $main--500
+                &:first-child // <
+                    width: .4em
+                    transition-delay: .0s
+                &:nth-child(2) // c
+                    width: .5em
+                &:nth-child(3) // o
+                    width: .5em
+                &:nth-child(4) // m
+                    width: .9em
+                &:nth-child(5) //m
+                    width: .9em
+                    transition-delay: 0s
+                &:nth-child(6) // u
+                    width: .6em
+                    transition-delay: .1s
+                &:nth-child(7) // n
+                    width: .65em
+                    transition-delay: .2s
+                &:nth-child(8) // i
+                    width: .3em
+                    transition-delay: .3s
+                &:nth-child(9) // t
+                    width: .4em
+                    transition-delay: 0.4s
+                &:nth-child(10) // y
+                    width: .4em
+                    transition-delay: 0.5s
+                &:nth-last-child(2), &:last-child // />
+                    width: .3em
