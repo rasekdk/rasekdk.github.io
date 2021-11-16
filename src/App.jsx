@@ -10,12 +10,20 @@ import ErrorPage from "./components/pages/ErrorPage";
 import Home from "./components/pages/Home/Home";
 import Projects from "./components/pages/Projects/Projects";
 import CommunityProject from "./components/pages/Community/CommunityProject";
+import useScrollBlock from "./hooks/useScrollBlock";
+import useResetScroll from "./hooks/useResetScroll";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [blockScroll, allowScroll] = useScrollBlock();
+
+  useResetScroll();
+
+  if (menuOpen) blockScroll();
+  if (!menuOpen) allowScroll();
 
   return (
-    <div className={menuOpen ? "App menuOpen" : "App"}>
+    <div className="App">
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <AnimatePresence>
         <Switch>
