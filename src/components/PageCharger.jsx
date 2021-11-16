@@ -1,7 +1,7 @@
 import Charger from "./atoms/Charger";
 import { motion } from "framer-motion";
 
-function PageCharger({ children }) {
+function PageCharger({ children, className }) {
   return (
     <>
       <Charger />
@@ -10,6 +10,7 @@ function PageCharger({ children }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         transition={{ delay: 0.75, duration: 0.5, delayChildren: 0.25 }}
+        className={className}
       >
         {children}
       </motion.main>
