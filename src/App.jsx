@@ -9,6 +9,7 @@ import Contact from "./components/pages/Contact/Contact";
 import ErrorPage from "./components/pages/ErrorPage";
 import Home from "./components/pages/Home/Home";
 import Projects from "./components/pages/Projects/Projects";
+import CommunityProject from "./components/pages/Community/CommunityProject";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -25,6 +26,12 @@ function App() {
             <About />
           </Route>
           <Route exact path="/projects">
+            <Projects />
+          </Route>
+          <Route exact path="/projects/community">
+            <CommunityProject />
+          </Route>
+          <Route exact path="/projects/biojuego">
             <Projects />
           </Route>
           <Route exact path="/contact" component={Contact} />
