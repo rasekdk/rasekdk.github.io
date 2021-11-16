@@ -36,7 +36,7 @@ function About() {
             <p className="subtitle_xlow">
               Download my{" "}
               <a
-                href="/Cesar_Resume.pdf"
+                href="/resources/Cesar_Resume.pdf"
                 className="btn btn_inline"
                 target="_blank"
                 rel="noreferrer"
@@ -46,9 +46,7 @@ function About() {
               </a>
             </p>
             <div className="section_description">
-              <h3 className="subtitle">
-                I am a web developer and graphic designer from Spain.
-              </h3>
+              <h3 className="subtitle">Web Developer and Graphic Designer</h3>
               <p className="subtitle_low">&#60;1+ year of experience/&#62;</p>
             </div>
           </div>
