@@ -1,0 +1,39 @@
+---
+import Menu from '../components/Menu.astro';
+interface Props {
+	title: string;
+  lang?: string;
+}
+
+const { title, lang='en' } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>{title}</title>
+	</head>
+	<body>
+    <header>
+      <Menu />
+    </header>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+    --main-color: #EE6300;
+    --white-color: #FFFFFF;
+    --black-color: #000000;
+	}
+	html {
+    color-scheme: dark light;
+		font-family: system-ui, sans-serif;
+		background: #13151a;
+		background-size: 224px;
+	}
+</style>
