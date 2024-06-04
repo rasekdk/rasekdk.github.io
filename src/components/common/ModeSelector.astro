@@ -1,0 +1,37 @@
+---
+---
+
+<footer>
+  <ul>
+    <li><input type="radio" id="light" name="colorMode">light</input></li>
+    <li><input type="radio" id="dark" name="colorMode" checked>dark</input></li>
+  </ul>
+</footer>
+
+<style>
+  footer {
+    position: absolute;
+    z-index: 1;
+    transform: rotate(-90deg);
+    transform-origin: left bottom;
+    bottom: 0;
+  }
+
+  ul {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+  }
+</style>
+
+<style is:global>
+  :root:has(#dark:checked) {
+    --color-mode: var(--dark-mode)
+  }
+  :root:has(#light:checked) {
+    --color-mode: var(--light-mode)
+  }
+</style>

@@ -1,39 +1,99 @@
 ---
-import Menu from '../components/Menu.astro';
-interface Props {
-	title: string;
-  lang?: string;
-}
+// Components
+import Header from '@/components/common/Header.astro'
+import ModeSelector from '@/components/common/ModeSelector.astro'
 
-const { title, lang='en' } = Astro.props;
+// Constants
+import { mainColor, neutralColor } from '@/constants/colors'
+
+// Libs
+import '@fontsource-variable/roboto-mono'
+
+// props
+const {page} = Astro.props
 ---
 
 <!doctype html>
-<html lang={lang}>
+<html>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
+		<title>{page}</title>
 	</head>
 	<body>
-    <header>
-      <Menu />
-    </header>
-		<slot />
+    <Header/>
+    <main>
+      <slot />
+    </main>
+    <ModeSelector />
 	</body>
 </html>
+
+<style define:vars={{...mainColor, ...neutralColor}}></style>
+
 <style is:global>
 	:root {
-    --main-color: #EE6300;
-    --white-color: #FFFFFF;
-    --black-color: #000000;
+    --main-color: var(--main6);
+    --text-color: light-dark(var(--gray10), var(--gray2));
+    --bg-color: light-dark(var(--gray4), var(--gray10));
+    --dark-mode: dark;
+    --light-mode: light;
+    --font-size: 12px
+    font-family: 'Roboto Mono Variable', monospace;
 	}
+
 	html {
-    color-scheme: dark light;
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+    color-scheme: var(--color-mode);
+		font-family: monospace, system-ui, sans-serif;
+    color: var(--text-color);
+		background: var(--bg-color);
 		background-size: 224px;
+    padding: 1.5rem;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
 	}
+  
+  html, body, header, main {
+    box-sizing: border-box;
+  }
+  
+  </style>
+
+<style>
+  body {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    border: 1px solid var(--main-color);
+    position: relative;
+    overflow: hidden;
+  }
+
+  body::-webkit-scrollbar { 
+    display: none;
+  }
+
+  header {
+    z-index: 1;
+    padding: 1rem;
+    height: auto;
+    position: absolute;
+  }
+    main {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    text-align: right;
+    padding: 1rem;
+    padding-top: 40rem;
+    overflow: scroll;
+    overscroll-behavior: none;
+    scrollbar-width: none;
+  }
 </style>

@@ -1,0 +1,18 @@
+---
+import { ROUTES, MENU_ROUTES_MAPS } from "@/constants/routing"
+
+
+---
+<nav>
+  <ul>
+    {MENU_ROUTES_MAPS.map(route => {
+      return (<li id={route}><a href={ROUTES[route]}>{route}</a></li>)
+    })}
+  </ul>
+</nav>
+
+<style>
+  nav{
+    
+  }
+</style>

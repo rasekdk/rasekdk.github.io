@@ -1,39 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Logo from '../components/Logo.astro';
+// Layouts
+import Layout from '@/layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<Logo />
-	</main>
+<Layout page="César Nóvoa">
+  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae dolore porro vitae expedita perferendis molestias corrupti fugit quibusdam explicabo tempora. Nostrum, perferendis rerum! Explicabo suscipit eius adipisci tenetur omnis accusamus.
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-</style>
