@@ -12,14 +12,12 @@
   "dependencies": {
     "@astrojs/check": "0.7.0",
     "@fontsource-variable/roboto-mono": "5.0.19",
-    "@typescript-eslint/parser": "7.12.0",
+    "@typescript-eslint/parser": "^7.12.0",
     "astro": "4.9.2",
     "typescript": "5.4.5"
   },
   "devDependencies": {
-    "standard": "17.1.0"
-  },
-  "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json"
+    "eslint": "^9.4.0",
+    "eslint-plugin-astro": "^1.2.0"
   }
 }
