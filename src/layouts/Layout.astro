@@ -8,6 +8,7 @@ import { mainColor, neutralColor } from '@/constants/colors'
 
 // Libs
 import '@fontsource-variable/roboto-mono'
+import { ViewTransitions } from 'astro:transitions'
 
 // props
 const {page} = Astro.props
@@ -21,79 +22,89 @@ const {page} = Astro.props
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{page}</title>
+    <ViewTransitions/>
 	</head>
-	<body>
+	<body transition:persist>
     <Header/>
-    <main>
-      <slot />
-    </main>
+    <slot />
     <ModeSelector />
 	</body>
 </html>
 
 <style define:vars={{...mainColor, ...neutralColor}}></style>
 
-<style is:global>
+<style>
 	:root {
     --main-color: var(--main6);
+    --main-color-hover: light-dark(var(--main2), var(--main9));
     --text-color: light-dark(var(--gray10), var(--gray2));
-    --bg-color: light-dark(var(--gray4), var(--gray10));
+    --text-color-hover: light-dark(var(--gray5), var(--gray9));
+    --bg-color: light-dark(var(--gray4), var(--gray12));
+    --fade-bg: light-dark(rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
     --dark-mode: dark;
     --light-mode: light;
-    --font-size: 12px
+    --font-size: 12px;
+    --noise-url: url('/noise.gif');
+    --padding: max(1rem, 4vmin);
+    --hover-transition: all .25s ease-in;
     font-family: 'Roboto Mono Variable', monospace;
+    font-size: var(--font-size);
+    color-scheme: var(--color-mode);
+    color: var(--text-color);
+		background: var(--bg-color);
 	}
 
 	html {
-    color-scheme: var(--color-mode);
+    position: absolute;
 		font-family: monospace, system-ui, sans-serif;
-    color: var(--text-color);
-		background: var(--bg-color);
-		background-size: 224px;
-    padding: 1.5rem;
-    width: 100vw;
-    height: 100vh;
+    top: var(--padding);
+    right: var(--padding);
+    left: var(--padding);
+    bottom: var(--padding);
     display: flex;
 	}
   
-  html, body, header, main {
+  body, header, main {
     box-sizing: border-box;
   }
   
-  </style>
-
-<style>
   body {
     margin: 0;
     display: flex;
     width: 100%;
+    height: 100%;
     border: 1px solid var(--main-color);
-    position: relative;
-    overflow: hidden;
   }
+
+  body::before {
+    content: '';
+    background-image: var(--noise-url);
+    opacity: 0.02;
+    position: absolute;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  body::after {
+  content: '';
+  display: block;
+  background: 
+    linear-gradient(0deg, rgba(255,255,255,0) 66%, var(--fade-bg) 84%);
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  right: 1px;
+  bottom: 0;
+  z-index: 0;
+  pointer-events: none;
+}
 
   body::-webkit-scrollbar { 
     display: none;
-  }
-
-  header {
-    z-index: 1;
-    padding: 1rem;
-    height: auto;
-    position: absolute;
-  }
-    main {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: start;
-    text-align: right;
-    padding: 1rem;
-    padding-top: 40rem;
-    overflow: scroll;
-    overscroll-behavior: none;
-    scrollbar-width: none;
   }
 </style>

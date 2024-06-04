@@ -1,16 +1,19 @@
 ---
+import HeaderLink from '@/components/common/HeaderLink.astro'
+import {getLocaleText} from '@/locales'
 import { ROUTES, MENU_ROUTES_MAPS } from "@/constants/routing"
+
 ---
 <nav>
-  <ul>
     {MENU_ROUTES_MAPS.map(route => {
-      return (<li id={route}><a href={ROUTES[route]}>{route}</a></li>)
+      return <HeaderLink href={ROUTES[route]}>{getLocaleText(`menu.${route}`)}</HeaderLink>
     })}
-  </ul>
 </nav>
 
 <style>
   nav{
-    
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
   }
 </style>

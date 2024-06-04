@@ -1,8 +1,41 @@
 ---
 // Layouts
 import Layout from '@/layouts/Layout.astro';
+import { getLocaleText } from '@/locales';
 ---
 
 <Layout page="César Nóvoa">
-  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae dolore porro vitae expedita perferendis molestias corrupti fugit quibusdam explicabo tempora. Nostrum, perferendis rerum! Explicabo suscipit eius adipisci tenetur omnis accusamus.
+  <main>
+    <h3>Hi,</h3>
+    {getLocaleText('home.desc')}
+  </main>
 </Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+    padding: var(--padding);
+    box-sizing: border-box;
+    padding-left: 70%;
+    top: var(--padding);
+    right: var(--padding);
+    left: var(--padding);
+    bottom: var(--padding);
+    font-size: 1.2rem;
+  }
+
+  h3 {
+    font-size: 5rem;
+    color: var(--main-color);
+    margin: 0;
+  }
+
+  @media only screen and (max-width: 600px) {
+    main{
+      padding-left: 20%;
+    }
+  }
+</style>
