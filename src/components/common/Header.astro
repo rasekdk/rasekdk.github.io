@@ -7,11 +7,12 @@ import { getLocaleText } from '@/locales'
 
 
 // props
+const {title, subtitle} = Astro.props
 ---
 
 <header>
-  <h1>{getLocaleText('title')}</h1>
-  <h2>{getLocaleText('title.sub')}</h2>
+  <h1>{title}</h1>
+  <h2>{subtitle}</h2>
   <Menu />
 </header>
 

@@ -5,13 +5,14 @@ import ModeSelector from '@/components/common/ModeSelector.astro'
 
 // Constants
 import { mainColor, neutralColor } from '@/constants/colors'
+import { getLocaleText } from '@/locales'
 
 // Libs
 import '@fontsource-variable/roboto-mono'
 import { ViewTransitions } from 'astro:transitions'
 
 // props
-const {page} = Astro.props
+const {page, title=getLocaleText('title'), subtitle=getLocaleText('title.sub')} = Astro.props
 ---
 
 <!doctype html>
@@ -25,7 +26,8 @@ const {page} = Astro.props
     <ViewTransitions/>
 	</head>
 	<body transition:persist>
-    <Header/>
+    <Header title={title} subtitle={subtitle}/>
+    <slot name="extraSlot"/>
     <slot />
     <ModeSelector />
 	</body>
@@ -79,9 +81,9 @@ const {page} = Astro.props
   body::before {
     content: '';
     background-image: var(--noise-url);
+    background-size: cover;
     opacity: 0.02;
     position: absolute;
-    background-size: cover;
     top: 0;
     right: 0;
     left: 0;
