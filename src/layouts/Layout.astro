@@ -11,6 +11,9 @@ import { getLocaleText } from '@/locales'
 import '@fontsource-variable/roboto-mono'
 import { ViewTransitions } from 'astro:transitions'
 
+// Fonts
+import './zodiak.css'
+
 // props
 const {page, title=getLocaleText('title'), subtitle=getLocaleText('title.sub')} = Astro.props
 ---
@@ -33,9 +36,7 @@ const {page, title=getLocaleText('title'), subtitle=getLocaleText('title.sub')} 
 	</body>
 </html>
 
-<style define:vars={{...mainColor, ...neutralColor}}></style>
-
-<style>
+<style define:vars={{...mainColor, ...neutralColor}}>
 	:root {
     --main-color: var(--main6);
     --main-color-hover: light-dark(var(--main2), var(--main9));
@@ -49,7 +50,7 @@ const {page, title=getLocaleText('title'), subtitle=getLocaleText('title.sub')} 
     --noise-url: url('/noise.gif');
     --padding: max(1rem, 4vmin);
     --hover-transition: all .25s ease-in;
-    font-family: 'Roboto Mono Variable', monospace;
+    font-family: 'Zodiak-Variable';
     font-size: var(--font-size);
     color-scheme: var(--color-mode);
     color: var(--text-color);
