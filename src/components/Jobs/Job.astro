@@ -1,5 +1,7 @@
 ---
 import { getLocaleText } from "@/locales"
+import Heading from "@/components/common/typography/Heading.astro"
+import Paragraph from "../common/typography/Paragraph.astro"
 
 const {company, title, startDate, endDate, finished, desc} = Astro.props.job
 ---
@@ -7,17 +9,20 @@ const {company, title, startDate, endDate, finished, desc} = Astro.props.job
 <details name="job">
   <summary>
     <header>
-      <h4>{title}</h4>
+      <Heading type="h4">{title}</Heading>
     </header>
     <aside>
-      <p>{company} / {startDate}-{finished ? endDate : getLocaleText('jobs.present')}</p>
+      <Paragraph><strong>{company} / {startDate}-{finished ? endDate : getLocaleText('jobs.present')}</strong></Paragraph>
     </aside>
   </summary>
-  <p>{desc}</p>
+  <Paragraph>{desc}</Paragraph>
 
 </details>
 
 <style>
+  details {
+    margin-bottom: 2rem;
+  }
   details summary{
     list-style: none;
     display: flex;
@@ -25,6 +30,7 @@ const {company, title, startDate, endDate, finished, desc} = Astro.props.job
     justify-content: space-between;
     cursor: pointer;
     transition: var(--hover-transition);
+    margin-bottom: 1rem;
   }
 
   details summary:hover {
@@ -44,18 +50,7 @@ const {company, title, startDate, endDate, finished, desc} = Astro.props.job
     justify-content: flex-start;
   }
 
-  p {
-    font-size: min(1rem, 4vmin);
-    font-weight: 800;
-  }
-
   details p {
     margin: .5rem  0 1rem;
-  }
-
-  @media only screen and (min-width: 1200px) {
-    h4 {
-      font-size: 5rem;
-    }
   }
 </style>

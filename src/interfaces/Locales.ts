@@ -7,11 +7,8 @@ export interface Translations {
     __self: string;
     sub: string;
   };
-  jobs: {
-    [x: string]: Job | string;
-  };
-  home: {
-    [x: string]: string;
+  [x: string]: {
+    [x: string]: string | Job;
   };
 }
 

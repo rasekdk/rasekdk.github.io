@@ -10,7 +10,7 @@ const en: Translations = {
     [ROUTES_KEYS.CONTACT]: "contact",
   },
   title: {
-    __self: "César Nóvoa",
+    __self: "Cesar Novoa",
     sub: "Developer & Designer",
   },
   jobs: {
@@ -33,6 +33,17 @@ const en: Translations = {
   },
   home: {
     desc: "Frontend Software Engineer with over 3 years of experience in web development and design. Currently, I work on unifying and rebuilding the interface of a cloud service management and migration platform, in addition to performing maintenance tasks on the existing interface. This role is conducted in English, enabling me to operate fluently in this language in a professional setting.\nI have worked in a marketing agency, where I held roles as both a graphic and web designer, and later as a web developer for both frontend and backend. During my second tenure at this company, in addition to my responsibilities as a developer, I gradually took on the management of workload and project organization for the IT team, as well as creating custom solutions due to the limitations of the task management software used at the time.",
+  },
+  contact: {
+    title: "Here is my contact info!",
+    email: {
+      __self: "novoafernandezcesar@gmail.com",
+      title: "Email",
+    },
+    phone: {
+      __self: "+34 698 139 758",
+      title: "Phone",
+    },
   },
 };
 

@@ -1,14 +1,19 @@
 ---
 // Layouts
+import Main from '@/components/common/Main.astro';
+import Heading from '@/components/common/typography/Heading.astro';
+import Paragraph from '@/components/common/typography/Paragraph.astro';
 import Layout from '@/layouts/Layout.astro';
 import { getLocaleText } from '@/locales';
 ---
 
 <Layout page="César Nóvoa">
-  <main>
-    <h3>Hi,</h3>
-    {getLocaleText('home.desc')}
-  </main>
+  <Main>
+    <Heading type="h2" color="main">Hi,</Heading>
+    <Paragraph>
+      {getLocaleText('home.desc')}
+    </Paragraph>
+  </Main>
 </Layout>
 
 <style>
@@ -25,12 +30,6 @@ import { getLocaleText } from '@/locales';
     left: var(--padding);
     bottom: var(--padding);
     font-size: 1.2rem;
-  }
-
-  h3 {
-    font-size: 5rem;
-    color: var(--main-color);
-    margin: 0;
   }
 
   @media only screen and (max-width: 600px) {

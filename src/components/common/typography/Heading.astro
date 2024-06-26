@@ -1,0 +1,42 @@
+---
+// Types
+import type { HTMLTag } from 'astro/types';
+
+// Constants
+import { HEADING_SIZE_INCREMENT } from '@/constants/font';
+
+//props
+const {color, type} = Astro.props;
+
+// Custom
+const elementVars = {
+        '--mobile': HEADING_SIZE_INCREMENT[type].mobile,
+        '--desktop': HEADING_SIZE_INCREMENT[type].desktop,
+      }
+
+const Element:HTMLTag = type;
+---
+
+<Element style={{...elementVars}} class={color ? color : ''}>
+  <slot />
+</Element>
+
+<style>
+  h1, h2, h3, h4, h5, h6 {
+    font-size: calc(var(--base) * var(--mobile));
+    line-height: 1em;
+    font-weight: 900;
+    color: var(--text-color);
+    margin: 0;
+  }
+
+  .main {
+    color: var(--main-color)
+  }
+
+  @media only screen and (min-width: 600px) {
+    h1, h2, h3, h4, h5, h6 {
+      font-size: calc(var(--base) * var(--desktop));
+    }
+  }
+</style>

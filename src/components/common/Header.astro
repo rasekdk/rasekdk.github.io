@@ -2,42 +2,32 @@
 // Components
 import Menu from '@/components/common/Menu.astro'
 import { getLocaleText } from '@/locales'
+import Heading from './typography/Heading.astro'
 
 // Utils
 
 
 // props
-const {title, subtitle} = Astro.props
+const {title, subtitle="subtitulo"} = Astro.props
 ---
 
 <header>
-  <h1>{title}</h1>
-  <h2>{subtitle}</h2>
+  <Heading type="h1">{title}</Heading>
+  <Heading type="h6" color="main">{subtitle}</Heading>
   <Menu />
 </header>
 
 
 
 <style>
-  h1 {
-    font-weight: 100;
-    font-size: 4rem;
-    margin: 0;
-  }
-
-  h2 {
-    font-weight: 400;
-    font-size: 1.5rem;
-    margin: 0;
-    color: var(--main-color)
-  }
-
   header {
     --header-padding: 3rem;
     z-index: 1;
     padding: var(--header-padding);
     height: auto;
     position: absolute;
+    top: 0;
+    left: 0;
   }
 
   @media only screen and (max-width: 600px) {

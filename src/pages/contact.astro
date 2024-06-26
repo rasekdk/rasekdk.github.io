@@ -1,8 +1,51 @@
 ---
 // Layouts
+import Main from '@/components/common/Main.astro';
+import Heading from '@/components/common/typography/Heading.astro';
+import Paragraph from '@/components/common/typography/Paragraph.astro';
 import Layout from "@/layouts/Layout.astro";
+import { getLocaleText } from '@/locales';
 ---
 
 <Layout>
-  <p>Contacto</p>
+  <Main class='contact'>
+    <Heading type="h5" color="main">
+      {getLocaleText('contact.title')}
+    </Heading>
+    <section>
+      <Heading type="h6">
+        {getLocaleText('contact.email.title')}
+      </Heading>
+      <Paragraph>
+        {getLocaleText('contact.email')}
+      </Paragraph>
+    </section>
+    <section>
+      <Heading type="h6">
+        {getLocaleText('contact.phone.title')}
+      </Heading>
+      <Paragraph>
+        {getLocaleText('contact.phone')}
+      </Paragraph>
+    </section>
+    <section>
+      <Heading type="h6">
+        {getLocaleText('contact.phone.title')}
+      </Heading>
+      <Paragraph>
+        {getLocaleText('contact.phone')}
+      </Paragraph>
+    </section>
+  </Main>
 </Layout>
+
+<style>
+  section {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact {
+    margin-bottom: 3rem;
+  }
+</style>

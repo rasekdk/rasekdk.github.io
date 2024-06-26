@@ -2,6 +2,7 @@
 import Job from "./Job.astro"
 import { getJobs } from "@/constants/jobs";
 import { getLocaleText } from "@/locales";
+import Heading from "../common/typography/Heading.astro";
 const jobs = getJobs('asc');
 ---
 
@@ -10,7 +11,7 @@ const jobs = getJobs('asc');
 <main>
   <article>
     <header>
-      <h3>{getLocaleText('jobs.title')}</h3>
+      <Heading type="h6" color="main">{getLocaleText('jobs.title')}</Heading>
     </header>
     <section>
       {jobs.map((job, index) => <Job job={job} index={index} />)}
@@ -22,7 +23,6 @@ const jobs = getJobs('asc');
 main {
   top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
   position: absolute;
   display: flex;
@@ -36,9 +36,9 @@ main {
   z-index: 0;
 }
 
-@media only screen and (max-width: 600px) {
-  section {
-    width: 100%;
+@media only screen and (min-width: 600px) {
+  main {
+    max-width: 80vw;
   }
 }
 
