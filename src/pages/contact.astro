@@ -2,9 +2,11 @@
 // Layouts
 import Main from '@/components/common/Main.astro';
 import Heading from '@/components/common/typography/Heading.astro';
+import Link from '@/components/common/typography/Link.astro';
 import Paragraph from '@/components/common/typography/Paragraph.astro';
 import Layout from "@/layouts/Layout.astro";
 import { getLocaleText } from '@/locales';
+import { Icon } from 'astro-icon/components';
 ---
 
 <Layout>
@@ -28,13 +30,13 @@ import { getLocaleText } from '@/locales';
         {getLocaleText('contact.phone')}
       </Paragraph>
     </section>
-    <section>
-      <Heading type="h6">
-        {getLocaleText('contact.phone.title')}
-      </Heading>
-      <Paragraph>
-        {getLocaleText('contact.phone')}
-      </Paragraph>
+    <section class="social">
+      <Link>
+        <Icon name="github" />
+      </Link>
+      <Link>
+        <Icon name="linkedin" />
+      </Link>
     </section>
   </Main>
 </Layout>
@@ -47,5 +49,12 @@ import { getLocaleText } from '@/locales';
 
   .contact {
     margin-bottom: 3rem;
+  }
+
+  .social {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--base) * 3);
+    justify-content: end;
   }
 </style>
