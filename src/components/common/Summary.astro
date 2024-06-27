@@ -1,12 +1,12 @@
 ---
 import { getLocaleText } from "@/locales"
 import Heading from "@/components/common/typography/Heading.astro"
-import Paragraph from "../common/typography/Paragraph.astro"
+import Paragraph from "./typography/Paragraph.astro"
 
 const {company, title, startDate, endDate, finished, desc} = Astro.props.job
 ---
 
-<details name="job">
+<details name="summary">
   <summary>
     <header>
       <Heading type="h4">{title}</Heading>
@@ -31,6 +31,10 @@ const {company, title, startDate, endDate, finished, desc} = Astro.props.job
     cursor: pointer;
     transition: var(--hover-transition);
     margin-bottom: 1rem;
+  }
+
+  details summary::-webkit-details-marker {
+    display:none;
   }
 
   details summary:hover {
