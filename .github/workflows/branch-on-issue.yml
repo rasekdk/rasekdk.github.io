@@ -1,0 +1,54 @@
+name: Create Branch on Issue Open
+
+on:
+  issues:
+    types:
+      - opened
+
+jobs:
+  create_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Create a new branch
+        id: create_branch
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issueNumber = context.payload.issue.number;
+            const branchName = `issue-${issueNumber}`;
+            const baseBranch = 'main'; // Change this if your default branch is different
+
+            // Get the latest commit SHA of the base branch
+            const { data: baseBranchData } = await github.rest.repos.getBranch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              branch: baseBranch,
+            });
+
+            const baseCommitSha = baseBranchData.commit.sha;
+
+            // Create the new branch
+            await github.rest.git.createRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: `refs/heads/${branchName}`,
+              sha: baseCommitSha,
+            });
+
+      - name: Comment on the issue
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const issueNumber = context.payload.issue.number;
+            const branchName = `issue-${issueNumber}`;
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: issueNumber,
+              body: `A new branch \`${branchName}\` has been created for this issue.`,
+            });
