@@ -1,6 +1,6 @@
 import { LOCALES_KEYS } from "@/constants/locales";
 import type { Translations } from "@/interfaces/Locales";
-import en from "@/locales/en";
+import en from "@/assets/locales/en";
 
 type LocaleKey = keyof typeof LOCALES_KEYS;
 

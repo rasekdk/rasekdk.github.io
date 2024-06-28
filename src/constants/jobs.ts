@@ -1,4 +1,4 @@
-import { getLocaleText } from "@/locales";
+import { getLocaleText } from "@/assets/locales";
 
 const jobs = [
   {
