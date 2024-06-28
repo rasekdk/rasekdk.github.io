@@ -50,5 +50,5 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: issueNumber,
-              body: `A new branch \`${branchName}\` has been created for this issue.`
+              body: `A new branch #${branchName} has been created for this issue.`
             });
