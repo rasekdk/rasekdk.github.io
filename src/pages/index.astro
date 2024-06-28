@@ -1,0 +1,17 @@
+---
+// Layouts
+import Main from '@/components/common/Main.astro';
+import Heading from '@/components/common/typography/Heading.astro';
+import Paragraph from '@/components/common/typography/Paragraph.astro';
+import Layout from '@/layouts/Layout.astro';
+import { getLocaleText } from '@/assets/locales';
+---
+
+<Layout page="César Nóvoa">
+  <Main>
+    <Heading type="h2" color="main">Hi,</Heading>
+    <Paragraph>
+      {getLocaleText('home.desc')}
+    </Paragraph>
+  </Main>
+</Layout>

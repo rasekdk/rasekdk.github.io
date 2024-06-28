@@ -1,0 +1,29 @@
+---
+// Constants
+import { PARAGRAPH_SIZE_INCREMENT } from '@/constants/font';
+import type { HTMLTag } from 'astro/types';
+
+//props
+const {color, type = 'p'} = Astro.props;
+---
+
+<p>
+  <slot />
+</p>
+
+<style define:vars={{...PARAGRAPH_SIZE_INCREMENT[type]}}>
+  p {
+    font-size: calc(var(--base) * var(--mobile));
+    line-height: 1rem;
+    font-weight: 700;
+    color: var(--text-color);
+    text-align: right;
+    margin: 0;
+  }
+
+  @media only screen and (min-width: 600px) {
+    p {
+      font-size: calc(var(--base) * var(--desktop));
+    }
+  }
+</style>

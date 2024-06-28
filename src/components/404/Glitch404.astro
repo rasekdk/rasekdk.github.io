@@ -1,0 +1,276 @@
+---
+---
+
+<div class="glitch" slot="extraSlot">
+  <div class="channel r"></div>
+  <div class="channel g"></div>
+  <div class="channel b"></div>
+</div>
+
+
+<style>
+  :root{
+    --notFound-url: url('/404.png');
+    --animation-time: 1s;
+  }
+  .glitch {
+    width: 100%;
+    height: 100%;
+    background: #000 no-repeat center;
+    background-image: var(--notFound-url);
+    background-size: cover;
+    opacity: .3;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+.glitch::before, .glitch::after,
+.glitch .channel {
+  background: inherit;
+  background-size: cover;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.glitch::before {
+  animation: glitch-before var(--animation-time) linear infinite alternate both;
+  content: "";
+}
+.glitch::after {
+  animation: glitch-after var(--animation-time) linear infinite alternate both;
+  content: "";
+}
+.glitch .channel {
+  mix-blend-mode: screen;
+}
+.glitch .channel::before {
+  bottom: 0;
+  content: "";
+  display: block;
+  mix-blend-mode: multiply;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.glitch .r {
+  animation: rgb-shift-r var(--animation-time) steps(1, jump-end) infinite alternate both;
+}
+.glitch .r::before {
+  background: #f00;
+}
+.glitch .g {
+  animation: rgb-shift-g var(--animation-time) steps(1, jump-end) infinite alternate both;
+}
+.glitch .g::before {
+  background: #0f0;
+}
+.glitch .b {
+  animation: rgb-shift-b var(--animation-time) steps(1, jump-end) infinite alternate both;
+}
+.glitch .b::before {
+  background: #00f;
+}
+
+@keyframes glitch-before {
+  0% {
+    clip-path: polygon(0% 22.7656335701%, 100% 22.7656335701%, 100% 28.6298069982%, 0% 28.6298069982%);
+    transform: translate(-6.4141334014%, -0.2063555903%);
+  }
+  2% {
+    clip-path: polygon(0% 29.0744269209%, 100% 29.0744269209%, 100% 32.1002791392%, 0% 32.1002791392%);
+    transform: translate(-2.0761867321%, 0.4125190446%);
+  }
+  4% {
+    clip-path: polygon(0% 53.9985986285%, 100% 53.9985986285%, 100% 59.1245892802%, 0% 59.1245892802%);
+    transform: translate(5.7465004266%, 0.0536151096%);
+  }
+  6% {
+    clip-path: polygon(0% 11.9281103687%, 100% 11.9281103687%, 100% 15.4260268614%, 0% 15.4260268614%);
+    transform: translate(-2.627973176%, 0.2373407698%);
+  }
+  8% {
+    clip-path: polygon(0% 52.0978383955%, 100% 52.0978383955%, 100% 54.7609968447%, 0% 54.7609968447%);
+    transform: translate(-1.9313090264%, -0.2935145523%);
+  }
+  10% {
+    clip-path: polygon(0% 56.5835161458%, 100% 56.5835161458%, 100% 63.3556891557%, 0% 63.3556891557%);
+    transform: translate(-4.153224518%, -0.2218332446%);
+  }
+  12% {
+    clip-path: polygon(0% 85.8129275038%, 100% 85.8129275038%, 100% 94.3863231763%, 0% 94.3863231763%);
+    transform: translate(-1.7898726454%, 0.0307532791%);
+  }
+  14% {
+    clip-path: polygon(0% 4.9246743254%, 100% 4.9246743254%, 100% 14.8379514853%, 0% 14.8379514853%);
+    transform: translate(-6.3444730493%, 0.1721332427%);
+  }
+  16% {
+    clip-path: polygon(0% 72.5754847754%, 100% 72.5754847754%, 100% 78.0331295967%, 0% 78.0331295967%);
+    transform: translate(5.403185657%, 0.4035385027%);
+  }
+  18% {
+    clip-path: polygon(0% 2.794692429%, 100% 2.794692429%, 100% 11.6413932445%, 0% 11.6413932445%);
+    transform: translate(3.6200740424%, -0.1521372498%);
+  }
+  20%, 100% {
+    clip-path: none;
+    transform: none;
+  }
+}
+@keyframes glitch-after {
+  0% {
+    clip-path: polygon(0% 18.6277561528%, 100% 18.6277561528%, 100% 20.4154772097%, 0% 20.4154772097%);
+    transform: translate(-4.1200711988%, 0.488199929%);
+  }
+  2% {
+    clip-path: polygon(0% 67.7927149278%, 100% 67.7927149278%, 100% 71.4053693952%, 0% 71.4053693952%);
+    transform: translate(5.8014780755%, -0.15751782%);
+  }
+  4% {
+    clip-path: polygon(0% 1.7750382519%, 100% 1.7750382519%, 100% 3.5929620447%, 0% 3.5929620447%);
+    transform: translate(-6.9017856719%, -0.4143975884%);
+  }
+  6% {
+    clip-path: polygon(0% 21.8021667672%, 100% 21.8021667672%, 100% 30.0617949524%, 0% 30.0617949524%);
+    transform: translate(-6.2624360644%, -0.3564164706%);
+  }
+  8% {
+    clip-path: polygon(0% 14.0464185213%, 100% 14.0464185213%, 100% 22.4631436054%, 0% 22.4631436054%);
+    transform: translate(3.8714509677%, 0.2313399111%);
+  }
+  10% {
+    clip-path: polygon(0% 36.9745563671%, 100% 36.9745563671%, 100% 38.3158040116%, 0% 38.3158040116%);
+    transform: translate(2.4898582049%, 0.4503438907%);
+  }
+  12% {
+    clip-path: polygon(0% 31.0337274692%, 100% 31.0337274692%, 100% 33.7239704098%, 0% 33.7239704098%);
+    transform: translate(7.914261989%, 0.2868121899%);
+  }
+  14% {
+    clip-path: polygon(0% 23.3090771807%, 100% 23.3090771807%, 100% 28.6613431908%, 0% 28.6613431908%);
+    transform: translate(3.2848578473%, 0.3345950967%);
+  }
+  16% {
+    clip-path: polygon(0% 21.0893335271%, 100% 21.0893335271%, 100% 22.6587246518%, 0% 22.6587246518%);
+    transform: translate(-2.8423586391%, -0.0860243834%);
+  }
+  18% {
+    clip-path: polygon(0% 25.7239449256%, 100% 25.7239449256%, 100% 26.7567398939%, 0% 26.7567398939%);
+    transform: translate(7.1643767014%, -0.4226694249%);
+  }
+  20%, 100% {
+    clip-path: none;
+    transform: none;
+  }
+}
+@keyframes rgb-shift-r {
+  0% {
+    transform: translate(-1.2265495422%, -0.2443154774%);
+  }
+  2% {
+    transform: translate(-0.9705628434%, -0.4105918303%);
+  }
+  4% {
+    transform: translate(0.6964087404%, 0.1180346181%);
+  }
+  6% {
+    transform: translate(-1.2642468853%, 0.184532418%);
+  }
+  8% {
+    transform: translate(1.6711957061%, -0.1260082599%);
+  }
+  10% {
+    transform: translate(-0.3538294508%, 0.1662774815%);
+  }
+  12% {
+    transform: translate(-1.6150923457%, 0.3869061848%);
+  }
+  14% {
+    transform: translate(0.0433795329%, 0.2131809999%);
+  }
+  16% {
+    transform: translate(-1.6133097766%, 0.1256977385%);
+  }
+  18% {
+    transform: translate(-0.3354421517%, 0.3576037964%);
+  }
+  20%, 100% {
+    transform: none;
+  }
+}
+@keyframes rgb-shift-g {
+  0% {
+    transform: translate(0.4240609784%, -0.0593221735%);
+  }
+  2% {
+    transform: translate(-0.3803269633%, 0.2459138378%);
+  }
+  4% {
+    transform: translate(1.1692192251%, -0.2703711619%);
+  }
+  6% {
+    transform: translate(-1.9397602309%, 0.3799246365%);
+  }
+  8% {
+    transform: translate(-1.1357417893%, 0.3408474928%);
+  }
+  10% {
+    transform: translate(1.6184387347%, 0.0017271864%);
+  }
+  12% {
+    transform: translate(1.7191207593%, 0.4957615811%);
+  }
+  14% {
+    transform: translate(-1.8145279378%, 0.1391251491%);
+  }
+  16% {
+    transform: translate(-0.6872630189%, -0.0497586108%);
+  }
+  18% {
+    transform: translate(-1.6663264295%, -0.4870577579%);
+  }
+  20%, 100% {
+    transform: none;
+  }
+}
+
+@keyframes rgb-shift-b {
+  0% {
+    transform: translate(1.3912090232%, -0.2572602129%);
+  }
+  2% {
+    transform: translate(1.4109297942%, 0.2880243276%);
+  }
+  4% {
+    transform: translate(0.9902461406%, 0.4542894972%);
+  }
+  6% {
+    transform: translate(0.9520869102%, 0.4065193686%);
+  }
+  8% {
+    transform: translate(1.3771765472%, -0.0530619312%);
+  }
+  10% {
+    transform: translate(-0.6662416475%, 0.1336138868%);
+  }
+  12% {
+    transform: translate(-0.5265452095%, -0.4074226712%);
+  }
+  14% {
+    transform: translate(-1.9515827691%, 0.0160387236%);
+  }
+  16% {
+    transform: translate(0.5884767224%, 0.4959826317%);
+  }
+  18% {
+    transform: translate(0.8255572012%, 0.2051635974%);
+  }
+  20%, 100% {
+    transform: none;
+  }
+}
+
+</style>

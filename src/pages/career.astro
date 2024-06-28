@@ -1,0 +1,23 @@
+---
+// Layouts
+import Layout from "@/layouts/Layout.astro";
+
+// Components
+import { getJobs } from "@/constants/jobs";
+import { getLocaleText } from "@/assets/locales";
+import Heading from "@/common/typography/Heading.astro";
+import Main from "@/common/Main.astro";
+import SummaryJob from "@/common/Summary.astro";
+const jobs = getJobs('asc');
+---
+
+<Layout>
+  <Main>
+    <header>
+      <Heading type="h6" color="main">{getLocaleText('jobs.title')}</Heading>
+    </header>
+    <section>
+      {jobs.map((job, index) => <SummaryJob job={job} index={index} />)}
+    </section>
+  </Main>
+</Layout>

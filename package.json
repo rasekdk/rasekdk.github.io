@@ -1,49 +1,28 @@
 {
-  "name": "rasekdk.github.io",
-  "homepage": "https://rasekdk.github.io",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "framer-motion": "^4.1.17",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "react-router-dom": "^5.3.0",
-    "react-scripts": "4.0.3",
-    "scrollmagic": "^2.0.8",
-    "web-vitals": "^1.0.1"
+  "name": "cesar-porfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "npm": "10.8.1",
+    "node": "20.15.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d build"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "@astrojs/check": "0.7.0",
+    "@fontsource-variable/roboto-mono": "5.0.19",
+    "@typescript-eslint/parser": "^7.12.0",
+    "astro": "4.9.2",
+    "astro-icon": "^1.1.0",
+    "typescript": "5.4.5"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
-    "sass": "^1.42.1"
+    "eslint": "^9.4.0",
+    "eslint-plugin-astro": "^1.2.0"
   }
 }

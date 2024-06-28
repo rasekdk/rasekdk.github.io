@@ -1,0 +1,60 @@
+---
+import { getLocaleText } from "@/assets/locales"
+import Heading from "@/components/common/typography/Heading.astro"
+import Paragraph from "./typography/Paragraph.astro"
+
+const {company, title, startDate, endDate, finished, desc} = Astro.props.job
+---
+
+<details name="summary">
+  <summary>
+    <header>
+      <Heading type="h4">{title}</Heading>
+    </header>
+    <aside>
+      <Paragraph><strong>{company} / {startDate}-{finished ? endDate : getLocaleText('jobs.present')}</strong></Paragraph>
+    </aside>
+  </summary>
+  <Paragraph>{desc}</Paragraph>
+
+</details>
+
+<style>
+  details {
+    margin-bottom: 2rem;
+  }
+  details summary{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: var(--hover-transition);
+    margin-bottom: 1rem;
+  }
+
+  details summary::-webkit-details-marker {
+    display:none;
+  }
+
+  details summary:hover {
+    color: var(--text-color-hover)
+  }
+
+  h4 {
+    font-size: 5vw;
+    font-weight: 200;
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  details p {
+    margin: .5rem  0 1rem;
+  }
+</style>
