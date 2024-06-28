@@ -1,0 +1,31 @@
+name: Delete Branch on PR Close
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  delete_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Delete branch
+        if: github.event.pull_request.merged == false # Only delete if the PR is closed without merging
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const branchRef = context.payload.pull_request.head.ref;
+
+            // Ensure that the branch is not the default branch
+            const defaultBranch = context.payload.repository.default_branch;
+            if (branchRef !== defaultBranch) {
+              await github.rest.git.deleteRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `heads/${branchRef}`,
+              });
+            }
